@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+    --black: #111;
+    --white: #f7f5ef;
+    --accent: #ff5b35;
+    --yellow: #f9d949;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+    background: var(--white);
+    color: var(--black);
+    font-family: "DM Sans", sans-serif;
+}
+
+button,
+a {
+    color: inherit;
+}
+
+button {
+    border: 0;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    min-height: 700px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* ------------------------------
+   BACKGROUND
+------------------------------ */
+
+.background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    background: #f5eee0;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+.blob-1 {
+    width: 55vw;
+    height: 55vw;
+    left: -12vw;
+    top: -25vw;
+    background: #ffca3a;
+}
+
+.blob-2 {
+    width: 40vw;
+    height: 40vw;
+    right: -10vw;
+    bottom: -15vw;
+    background: #ff725e;
+}
+
+.blob-3 {
+    width: 25vw;
+    height: 25vw;
+    left: 38%;
+    bottom: -15vw;
+    background: #8ed8ce;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+
+    padding: 0 4vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.logo-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.header-center {
+    display: flex;
+    gap: 25px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.menu i {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: var(--black);
+}
+
+.menu i:last-child {
+    width: 12px;
+}
+
+/* ------------------------------
+   GIANT TITLE
+------------------------------ */
+
+.giant-title {
+    position: absolute;
+
+    left: 7vw;
+    top: 22%;
+
+    z-index: 1;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(100px, 16vw, 260px);
+    font-weight: 700;
+    line-height: 0.72;
+
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+}
+
+.title-line {
+    position: relative;
+}
+
+.title-line-2 {
+    margin-left: 8vw;
+}
+
+.title-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--black);
+}
+
+/* ------------------------------
+   CHARACTER
+------------------------------ */
+
+.character {
+    position: absolute;
+
+    width: min(39vw, 580px);
+    height: 70vh;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -48%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+}
+
+.character-inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    z-index: 3;
+
+    filter: drop-shadow(25px 35px 0 rgba(0, 0, 0, 0.08));
+}
+
+.character-glow {
+    position: absolute;
+
+    width: 65%;
+    height: 65%;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    filter: blur(35px);
+
+    z-index: 1;
+}
+
+.character-shadow {
+    position: absolute;
+
+    width: 65%;
+    height: 7%;
+
+    bottom: 4%;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.16);
+
+    filter: blur(18px);
+
+    z-index: 0;
+}
+
+/* ------------------------------
+   INFO
+------------------------------ */
+
+.character-info {
+    position: absolute;
+
+    left: 4vw;
+    bottom: 13vh;
+
+    display: flex;
+    gap: 22px;
+
+    z-index: 10;
+}
+
+.info-number {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.info-content {
+    width: 230px;
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.info-content h2 {
+    margin-bottom: 5px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.info-content p {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.65;
+}
+
+/* ------------------------------
+   SIDE TEXT
+------------------------------ */
+
+.side-text {
+    position: absolute;
+
+    right: 3vw;
+    top: 42%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    writing-mode: vertical-rl;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    z-index: 10;
+}
+
+/* ------------------------------
+   COUNTER
+------------------------------ */
+
+.counter {
+    position: absolute;
+
+    right: 4vw;
+    bottom: 13vh;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    z-index: 10;
+}
+
+.counter-line {
+    width: 60px;
+    height: 1px;
+    background: var(--black);
+    opacity: 0.3;
+}
+
+/* ------------------------------
+   GALLERY NAV
+------------------------------ */
+
+.gallery-nav {
+    position: absolute;
+
+    left: 50%;
+    bottom: 3vh;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 9px;
+
+    z-index: 30;
+}
+
+.gallery-item {
+    position: relative;
+
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    transition:
+        width 0.4s ease,
+        background 0.4s ease;
+}
+
+.gallery-item span {
+    position: absolute;
+
+    left: 7px;
+    top: 6px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    z-index: 3;
+}
+
+.gallery-item .mini {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item.active img {
+    transform: scale(1.12);
+}
+
+.gallery-item.active {
+    width: 105px;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+/* ------------------------------
+   SCROLL
+------------------------------ */
+
+.scroll {
+    position: absolute;
+
+    right: 4vw;
+    bottom: 4vh;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+
+    z-index: 10;
+}
+
+.scroll-line {
+    width: 35px;
+    height: 1px;
+    background: var(--black);
+}
+
+/* ------------------------------
+   NEXT SPACE
+------------------------------ */
+
+.gallery-space {
+    height: 100vh;
+
+    background:
+        radial-gradient(circle at 50% 20%, #ffe56c, transparent 30%), #161616;
+}
+
+/* ------------------------------
+   LOADER
+------------------------------ */
+
+.loader {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #161616;
+    color: white;
+
+    z-index: 100;
+
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.loader-number {
+    font-size: clamp(80px, 12vw, 180px);
+    font-weight: 700;
+    letter-spacing: -0.08em;
+}
+
+.loader-line {
+    width: 180px;
+    height: 1px;
+
+    margin-top: 20px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    overflow: hidden;
+}
+
+.loader-line span {
+    display: block;
+
+    width: 0%;
+    height: 100%;
+
+    background: white;
+}
+
+.loader-text {
+    margin-top: 15px;
+
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 650px;
+    }
+
+    .header-center {
+        display: none;
+    }
+
+    .giant-title {
+        left: 5vw;
+        top: 25%;
+
+        font-size: 24vw;
+    }
+
+    .character {
+        width: 75vw;
+        height: 75vh;
+
+        top: 53%;
+    }
+
+    .character-info {
+        left: 5vw;
+        bottom: 14vh;
+    }
+
+    .info-content {
+        width: 160px;
+    }
+
+    .info-content h2 {
+        font-size: 22px;
+    }
+
+    .side-text {
+        display: none;
+    }
+
+    .counter {
+        right: 5vw;
+        bottom: 14vh;
+    }
+
+    .gallery-nav {
+        width: 90vw;
+
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+    .gallery-item {
+        width: 45px;
+        height: 45px;
+    }
+
+    .gallery-item.active {
+        width: 65px;
+    }
+
+    .gallery-item span {
+        font-size: 7px;
+    }
+
+    .scroll {
+        display: none;
+    }
+}

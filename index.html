@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cartoon Lab</title>
+
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+
+    <body>
+        <div class="loader">
+            <div class="loader-number">00</div>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+            <div class="loader-text">LOADING CHARACTERS</div>
+        </div>
+
+        <main>
+            <section class="hero">
+                <!-- BACKGROUND -->
+                <div class="background">
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                    <div class="blob blob-3"></div>
+                </div>
+
+                <!-- HEADER -->
+                <header class="header">
+                    <a href="#" class="logo">
+                        <span class="logo-dot"></span>
+                        CARTOON LAB
+                    </a>
+
+                    <div class="header-center">
+                        <span>CREATIVE</span>
+                        <span>CHARACTER</span>
+                        <span>GALLERY</span>
+                    </div>
+
+                    <button class="menu">
+                        <span>MENU</span>
+                        <i></i>
+                        <i></i>
+                    </button>
+                </header>
+
+                <!-- GIANT TYPE -->
+                <div class="giant-title">
+                    <div class="title-line title-line-1">DREAM</div>
+
+                    <div class="title-line title-line-2">
+                        <span>BIG</span>
+                        <span class="title-outline">.</span>
+                    </div>
+                </div>
+
+                <!-- CHARACTER -->
+                <div class="character">
+                    <div class="character-inner">
+                        <div class="character-glow"></div>
+
+                        <div class="character-shadow"></div>
+
+                        <img
+                            src="./assets/images/cartoon-01.png"
+                            alt="Cartoon character"
+                        />
+                    </div>
+                </div>
+
+                <!-- CHARACTER INFO -->
+                <div class="character-info">
+                    <span class="info-number">##</span>
+
+                    <div class="info-content">
+                        <span class="eyebrow">CHARACTER</span>
+                        <h2>Dreamer</h2>
+                        <p>A little imagination can create a very big world.</p>
+                    </div>
+                </div>
+
+                <!-- SIDE TEXT -->
+                <div class="side-text">
+                    <span>PLAY</span>
+                    <span>CREATE</span>
+                    <span>IMAGINE</span>
+                </div>
+
+                <!-- COUNTER -->
+                <div class="counter">
+                    <span class="counter-current">01</span>
+                    <span class="counter-line"></span>
+                    <span class="counter-total">06</span>
+                </div>
+
+                <!-- GALLERY NAV -->
+                <div class="gallery-nav">
+                    <button class="gallery-item active" data-index="0">
+                        <span>01</span>
+                        <div class="mini">
+                            <img src="./assets/images/cartoon-01.png" alt="" />
+                        </div>
+                    </button>
+
+                    <button class="gallery-item" data-index="1">
+                        <span>02</span>
+                        <div class="mini">
+                            <img src="./assets/images/cartoon-02.png" alt="" />
+                        </div>
+                    </button>
+
+                    <button class="gallery-item" data-index="2">
+                        <span>03</span>
+                        <div class="mini">
+                            <img src="./assets/images/cartoon-03.png" alt="" />
+                        </div>
+                    </button>
+
+                    <button class="gallery-item" data-index="3">
+                        <span>04</span>
+                        <div class="mini">
+                            <img src="./assets/images/cartoon-04.png" alt="" />
+                        </div>
+                    </button>
+
+                    <button class="gallery-item" data-index="4">
+                        <span>05</span>
+                        <div class="mini">
+                            <img src="./assets/images/cartoon-05.png" alt="" />
+                        </div>
+                    </button>
+
+                    <button class="gallery-item" data-index="5">
+                        <span>06</span>
+                        <div class="mini">
+                            <img src="./assets/images/cartoon-06.png" alt="" />
+                        </div>
+                    </button>
+                </div>
+
+                <!-- SCROLL -->
+                <div class="scroll">
+                    <span>SCROLL</span>
+                    <div class="scroll-line"></div>
+                    <span>DOWN</span>
+                </div>
+            </section>
+
+            <section class="gallery-space"></section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
